@@ -11,7 +11,13 @@ For compiling and running the C++ project in *GraphSampling*, you need to instal
 For running the python code in GraphAE, Zhou et al., recommend python3.6, numpy, pytorch0.4.1 or higher version such as pytorch1.3, plyfile, json, configparser, tensorboardX, matplotlib, transforms3d and opencv-python.
 
 ### 2. Data Preparation
-Download data
+Download data:
+[Google Drive](https://drive.google.com/drive/folders/1IMmmzMVcdPApgFzSrTjanyH-jgRsTSB-?usp=share_link)
+
+- <em>train</em> contain weight file training of our paper
+- <em>data</em> contain train and eval data after preprocessing
+- <em>original_data</em> contain original obj type data
+
 
 ### 2. GraphSampling
 This code will load template.obj, compute the down and up-sampling graphs and write the *connection matrices* for each layer into .npy files.
@@ -23,7 +29,7 @@ make
 ./GraphSampling
 ```
 
-It will generate the *Connection matrices* for each sampling layer named as _poolX.npy or _unpoolX.npy and their corresponding obj meshes for visualization in "train/0422_graphAE_dfaust/ConnectionMatrices".
+It will generate the *Connection matrices* for each sampling layer named as _poolX.npy or _unpoolX.npy and their corresponding obj meshes for visualization in "train/graphAE_cirtech/ConnectionMatrices".
 
 ### 3. Network Training
 #### Step One: Create Configuration files.
