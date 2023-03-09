@@ -144,20 +144,18 @@ def test(param,test_npy_fn, gt_npy_fn, out_ply_folder, skip_frames =0):
 
 param=Param.Parameters()
 # param.read_config("../../train/0422_graphAE_dfaust/10_conv_res.config")
-param.read_config("../../train/0422_graphAE_cirdata_no_increase/10_conv_res.config")
+param.read_config("../../train/graphAE_cirdata/10_conv_res.config")
 
 #param.augmented_data=True
 param.batch=32
 
-# param.read_weight_path = "../../train/0422_graphAE_dfaust/weight_10/model_epoch0172.weight"
-param.read_weight_path = "../../train/0422_graphAE_cirdata_no_increase/weight_10/model_epoch0201.weight"
-print (param.read_weight_path)
+param.read_weight_path = "../../train/graphAE_cirdata/weight_10/model_epoch0201.weight"
+# print (param.read_weight_path)
 
-# test_npy_fn = "../../data/DFAUST/test.npy"
-test_npy_fn = "../../data/CIRDATA_noincrease/eval_X_vertices.npy"
-gt_npy_fn = "../../data/CIRDATA_noincrease/eval_Y_vertices.npy"
+test_npy_fn = "../../data/CIRDATA/eval_X_vertices.npy"
+gt_npy_fn = "../../data/CIRDATA/eval_Y_vertices.npy"
 
-out_test_folder = "../../train/0422_graphAE_cirdata_no_increase/test_10/epoch201_2/"
+out_test_folder = "../../train/graphAE_cirdata/test_10/"
 
 out_ply_folder = out_test_folder+"ply/"
 

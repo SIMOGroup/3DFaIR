@@ -1,5 +1,5 @@
 #include <iostream>
-//#include "meshPooler.h"
+// #include "meshPooler.h"
 #include "meshPooler_visualizer_new.h"
 
 
@@ -29,10 +29,7 @@ int main() {
     
     Mesh mesh;
 
-    
-    mesh.loadmesh_obj("../../data/DFAUST/template.obj");
-    //mesh.loadmesh_obj("/mnt/hdd1/yi_hdd1/GraphCNN_Facebook/body/fall/data/D-FAUST/sample.obj");
-    //mesh.loadmesh_obj("../../data/body_1m/template.obj");
+    mesh.loadmesh_obj("../../data/CIRDATA/template.obj");
 
     cout<<"#############################################################\n";
     cout<<"## Create pool and unpool layers ############################\n";
@@ -40,10 +37,10 @@ int main() {
 
     //TIPS, you can set layer 0 with stride=1, pool_radius=1, unpool_radius=1 to use for computing the laplacian loss.
     set_7k_mesh_layers_dfaust(meshCNN);
-
+    // return 0;
     cout<<"#############################################################\n";
     cout<<"## Save pool and unpool connection matrices in npy ##########\n";
-    string folder="../../train/0422_graphAE_dfaust/ConnectionMatrices/";
+    string folder="../../train/graphAE_cirdata/ConnectionMatrices/";
     meshCNN.save_pool_and_unpool_neighbor_info_to_npz(folder);
 
 
@@ -61,7 +58,4 @@ int main() {
         mpv.save_center_mesh(folder+"vis_center_"+to_string(i)+".obj", mesh,meshCNN, i);
     } 
     return 0;
-
-
-
 }
