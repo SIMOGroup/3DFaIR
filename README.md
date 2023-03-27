@@ -1,6 +1,10 @@
 ## 3D-Scar-Face-Restoration
 This repository contains the implementation (in PyTorch) of the paper
 
+![Training Model](img/img_1.png)
+
+![3D Printing Output](img/img_2.png)
+
 ## Introduction
 Base on the study of Zhou et al., we try to apply that model in a reality case. To do that, we try provide a training strategy and a new dataset to help Zhou et al., model can apply in restoration problem.
 
