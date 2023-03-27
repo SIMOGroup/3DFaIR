@@ -1,5 +1,6 @@
 ## 3D-Scar-Face-Restoration
 This repository contains the implementation (in PyTorch) of the paper
+3D Facial Imperfection Regeneration: Deep learning approach and 3D printing prototypes
 
 ![Training Model](img/img_1.png)
 
